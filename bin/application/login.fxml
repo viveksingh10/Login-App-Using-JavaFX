@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.loginController">
+   <children>
+      <Label fx:id="isConnected" layoutX="89.0" layoutY="85.0" prefHeight="48.0" prefWidth="282.0" text="Status" textFill="#ed0808">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtusername" layoutX="102.0" layoutY="151.0" promptText="Username">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <PasswordField fx:id="txtpassword" layoutX="104.0" layoutY="205.0" promptText="Password">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </PasswordField>
+      <Button layoutX="166.0" layoutY="270.0" mnemonicParsing="false" onAction="#Login" text="Login">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="54.0" layoutY="14.0" prefHeight="56.0" prefWidth="378.0" text="AB Company Login" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="36.0" />
+         </font>
+      </Label>
+      <Button layoutX="243.0" layoutY="349.0" mnemonicParsing="false" onAction="#NewUser" prefHeight="26.0" prefWidth="162.0" text="NEW USER" />
+      <Button layoutX="38.0" layoutY="349.0" mnemonicParsing="false" onAction="#Error" prefHeight="26.0" prefWidth="162.0" text="ERROR IN LOGIN" />
+   </children>
+</AnchorPane>
