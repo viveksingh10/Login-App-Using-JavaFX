@@ -9,7 +9,7 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.loginController">
    <children>
-      <Label fx:id="isConnected" layoutX="89.0" layoutY="85.0" prefHeight="48.0" prefWidth="282.0" text="Status" textFill="#ed0808">
+      <Label fx:id="isConnected" layoutX="73.0" layoutY="85.0" prefHeight="48.0" prefWidth="298.0" text="Status" textFill="#ed0808">
          <font>
             <Font size="18.0" />
          </font>
