@@ -53,12 +53,12 @@
             <Font size="14.0" />
          </font>
       </Button>
-      <Button layoutX="348.0" layoutY="463.0" mnemonicParsing="false" onAction="#exxit" text="EXIT">
+      <Button layoutX="348.0" layoutY="463.0" mnemonicParsing="false" onAction="#exxit" text="Exit">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="115.0" layoutY="464.0" mnemonicParsing="false" onAction="#submit" text="SUBMIT">
+      <Button layoutX="115.0" layoutY="464.0" mnemonicParsing="false" onAction="#submit" text="Submit">
          <font>
             <Font size="18.0" />
          </font>

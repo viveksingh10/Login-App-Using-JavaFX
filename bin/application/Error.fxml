@@ -29,7 +29,7 @@
          </font>
       </PasswordField>
       <Button layoutX="92.0" layoutY="262.0" mnemonicParsing="false" onAction="#submit" prefHeight="39.0" prefWidth="76.0" text="Submit" />
-      <Button layoutX="237.0" layoutY="264.0" mnemonicParsing="false" onAction="#exxit" prefHeight="39.0" prefWidth="76.0" text="EXIT" />
+      <Button layoutX="237.0" layoutY="264.0" mnemonicParsing="false" onAction="#exxit" prefHeight="39.0" prefWidth="76.0" text="Exit" />
       <Button layoutX="102.0" layoutY="361.0" mnemonicParsing="false" onAction="#out" prefHeight="26.0" prefWidth="183.0" text="Try another account Login" />
       <Label fx:id="mymessage" layoutX="45.0" layoutY="318.0" prefHeight="18.0" prefWidth="338.0">
          <font>

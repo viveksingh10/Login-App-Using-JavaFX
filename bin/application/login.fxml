@@ -9,22 +9,22 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.loginController">
    <children>
-      <Label fx:id="isConnected" layoutX="73.0" layoutY="85.0" prefHeight="48.0" prefWidth="298.0" text="Status" textFill="#ed0808">
+      <Label fx:id="isConnected" layoutX="88.0" layoutY="85.0" prefHeight="48.0" prefWidth="298.0" text="Status" textFill="#ed0808">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="txtusername" layoutX="102.0" layoutY="151.0" promptText="Username">
+      <TextField fx:id="txtusername" layoutX="90.0" layoutY="152.0" promptText="Username">
          <font>
             <Font size="18.0" />
          </font>
       </TextField>
-      <PasswordField fx:id="txtpassword" layoutX="104.0" layoutY="205.0" promptText="Password">
+      <PasswordField fx:id="txtpassword" layoutX="88.0" layoutY="205.0" promptText="Password">
          <font>
             <Font size="18.0" />
          </font>
       </PasswordField>
-      <Button layoutX="166.0" layoutY="270.0" mnemonicParsing="false" onAction="#Login" text="Login">
+      <Button layoutX="221.0" layoutY="270.0" mnemonicParsing="false" onAction="#Login" prefHeight="39.0" prefWidth="90.0" text="Login">
          <font>
             <Font size="18.0" />
          </font>
@@ -34,7 +34,7 @@
             <Font name="System Bold Italic" size="36.0" />
          </font>
       </Label>
-      <Button layoutX="243.0" layoutY="349.0" mnemonicParsing="false" onAction="#NewUser" prefHeight="26.0" prefWidth="162.0" text="NEW USER" />
-      <Button layoutX="38.0" layoutY="349.0" mnemonicParsing="false" onAction="#Error" prefHeight="26.0" prefWidth="162.0" text="ERROR IN LOGIN" />
+      <Button layoutX="243.0" layoutY="349.0" mnemonicParsing="false" onAction="#NewUser" prefHeight="26.0" prefWidth="162.0" text="New User" />
+      <Button layoutX="38.0" layoutY="349.0" mnemonicParsing="false" onAction="#Error" prefHeight="26.0" prefWidth="162.0" text="Error in Login" />
    </children>
 </AnchorPane>
