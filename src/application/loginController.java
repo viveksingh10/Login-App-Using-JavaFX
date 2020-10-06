@@ -10,6 +10,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
@@ -28,17 +29,28 @@ public class loginController implements Initializable {
     
     @FXML
     private TextField txtpassword;
-
-
+    @FXML
+    private Button button1;
+    @FXML
+    private Button button2;
+    @FXML
+    private Button button3;
+    
+    
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		if(loginModel.isDbConnected()) {
 			isConnected.setText("Enter Username & Password");
 		}else {
+			isConnected.setStyle
+			(
+					 "-fx-background-color: white;"
+					+ "-fx-text-fill: red;"
+			);
 			isConnected.setText("DB Not Connected");
 		}
 		
-	}
+	}	
 	
 	public void NewUser(ActionEvent event) {
 		try {
@@ -47,7 +59,7 @@ public class loginController implements Initializable {
 			FXMLLoader loader = new FXMLLoader();
 			Pane root = loader.load(getClass().getResource("/application/NewUser.fxml").openStream());
 			Scene scene = new Scene(root);
-			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			
 			primaryStage.setScene(scene);
 			primaryStage.setTitle(" Welcome to the Company");
 			primaryStage.show();
@@ -64,7 +76,7 @@ public class loginController implements Initializable {
 			FXMLLoader loader = new FXMLLoader();
 			Pane root = loader.load(getClass().getResource("/application/Error.fxml").openStream());
 			Scene scene = new Scene(root);
-			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			
 			primaryStage.setScene(scene);
 			primaryStage.setTitle(" Forgot Password ");
 			primaryStage.show();
@@ -79,6 +91,12 @@ public class loginController implements Initializable {
 	public void Login (ActionEvent event) {
 		try {
 			if(loginModel.isLogin(txtusername.getText(), txtpassword.getText())) {
+				isConnected.setStyle
+				(
+						
+						 "-fx-background-color: white;"
+						+ "-fx-text-fill: green;"
+				);
 			isConnected.setText("Login Sussesful");
 			((Node)event.getSource()).getScene().getWindow().hide();
 			Stage primaryStage = new Stage();
@@ -87,7 +105,7 @@ public class loginController implements Initializable {
 			UserController userController = (UserController)loader.getController();
 			userController.GetUser(txtusername.getText());
 			Scene scene = new Scene(root);
-			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			
 			primaryStage.setScene(scene);
 			
 			primaryStage.show();
@@ -95,11 +113,24 @@ public class loginController implements Initializable {
 			
 			
 		}else {
-			isConnected.setText("Enter valid Username and Password");
+			isConnected.setStyle
+			(
+					
+					 "-fx-background-color: white;"
+					+ "-fx-text-fill: red;"
+			);isConnected.setText("Invalid Username or pass");
+			
+			
 		}
 			
 		} catch (SQLException e) {
-			isConnected.setText("Enter valid Username and Password");
+			isConnected.setStyle
+			(
+					
+					 "-fx-background-color: white;"
+					+ "-fx-text-fill: red;"
+			);
+			isConnected.setText("Invalid Username or pass");
 			e.printStackTrace();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

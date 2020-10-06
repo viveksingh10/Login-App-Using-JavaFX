@@ -9,6 +9,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
@@ -34,6 +35,12 @@ public class UserController implements Initializable {
 	private Label lblcount;
 	@FXML
 	private Label myy;
+	@FXML
+	private Button button12;
+	@FXML
+	private Button button11;
+	@FXML
+	private Button button10;
 	
 	
 	
@@ -60,8 +67,20 @@ public class UserController implements Initializable {
 			count ++;
 			message += cb5.getText() + "\n";
 		}
-		
+		lblcount.setStyle
+		(
+				 "-fx-background-color:#1aff1a ;"
+							+"-fx-font-family: \"Berlin Sans FB\";"
+			                + "-fx-font-size: 24px;"	
+						+ "-fx-text-fill: black;"
+		);
 		lblcount.setText("Completed : " + count);
+		lbllist.setStyle(
+				"-fx-background-color:#1aff1a ;"
+				+"-fx-font-family: \"Berlin Sans FB\";"
+                + "-fx-font-size: 17px;"	
+			    + "-fx-text-fill: black;"
+               );
 		lbllist.setText(message);
 	}
 	
@@ -80,7 +99,7 @@ public class UserController implements Initializable {
 			FXMLLoader loader = new FXMLLoader();
 			Pane root = loader.load(getClass().getResource("/application/login.fxml").openStream());
 			Scene scene = new Scene(root);
-			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			/*scene.getStylesheets().add(getClass().getResource("application/application.css").toExternalForm());*/
 			primaryStage.setScene(scene);
 			primaryStage.show();
 			
@@ -96,9 +115,19 @@ public void exxit(ActionEvent event) {
 public void submit(ActionEvent event) {
 
 	if(lbllist.getText().trim().isEmpty()){
+		myy.setStyle
+		(
+			 "-fx-background-color: white;"
+			+ "-fx-text-fill: red;"
+		);
 		myy.setText("Nothing completed yet");
 	}
 	else{
+		myy.setStyle
+		(
+			 "-fx-background-color: #1aff1a;"
+			+ "-fx-text-fill: black;"
+		);
 	myy.setText("Updates Saved");
 	}
 	

@@ -9,6 +9,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
@@ -24,15 +25,35 @@ public class ErrorController implements Initializable {
 	private TextField txterroruser;
 	@FXML
 	private TextField txterrorpass;
+	@FXML
+	private Button button4;
+	@FXML
+	private Button button5;
+	@FXML
+	private Button button6;
+	
 
 	public void submit(ActionEvent event) {
 
 		if(txterroruser.getText().trim().isEmpty() || txterrorpass.getText().trim().isEmpty()) {
+			mymessage.setStyle
+			(
+				 "-fx-background-color: white;"
+				+ "-fx-text-fill: red;"
+			);
 			mymessage.setText("Invalid Username and Password");
 			
 		}else {
+			mymessage.setStyle
+			(
+					
+					 "-fx-background-color: #1aff1a;"
+					+ "-fx-text-fill: black;"
+			);
 		mymessage.setText("Problem registed, will tune you soon on your mail");
+		
 		}
+		
 		
 	}
 	
@@ -41,21 +62,29 @@ public class ErrorController implements Initializable {
 		
 	}
 	
+	
 	public void out(ActionEvent event) {
 		try {
+			
 			((Node)event.getSource()).getScene().getWindow().hide();
 			Stage primaryStage = new Stage();
 			FXMLLoader loader = new FXMLLoader();
 			Pane root = loader.load(getClass().getResource("/application/login.fxml").openStream());
 			Scene scene = new Scene(root);
-			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			
 			primaryStage.setScene(scene);
 			primaryStage.show();
+			
+			
+			
+			
 			
 		} catch (Exception e) {
 			
 		}
 	}
+
+	
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {

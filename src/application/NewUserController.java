@@ -9,6 +9,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
@@ -39,14 +40,30 @@ public class NewUserController implements Initializable {
     private TextField uname;
 	@FXML
     private TextField upass;	
+	@FXML
+	private Button button7;
+	@FXML
+	private Button button8;
+	@FXML
+	private Button button9;
 
 	public void submit(ActionEvent event) {
 		if(id.getText().trim().isEmpty()  || name.getText().trim().isEmpty()   || email.getText().trim().isEmpty() ||
 		   age.getText().trim().isEmpty() || desig.getText().trim().isEmpty()  || uname.getText().trim().isEmpty() ||
 		   cont.getText().trim().isEmpty()|| address.getText().trim().isEmpty()|| upass.getText().trim().isEmpty()) 
 		{
+	          message.setStyle
+			(
+				 "-fx-background-color: white;"
+				+ "-fx-text-fill: red;"
+			);
 			message.setText("Enter all details corrrectly");
 		}else {
+		    message.setStyle
+			(
+				 "-fx-background-color: #1aff1a;"
+				+ "-fx-text-fill: black;"
+			);
 		
 		message.setText("Registered, you will receive confirmation on your mail then you can login");
 		}
@@ -65,7 +82,7 @@ public class NewUserController implements Initializable {
 			FXMLLoader loader = new FXMLLoader();
 			Pane root = loader.load(getClass().getResource("/application/login.fxml").openStream());
 			Scene scene = new Scene(root);
-			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			
 			primaryStage.setScene(scene);
 			primaryStage.show();
 			
