@@ -28,7 +28,7 @@
 * JDBC  
 * SQLite  
 
-**Database Creation: Go to the Folder named Dummy_DB.md and copy and paste the mysql command for making the database tables and fill some dummy database.**
+**Database Creation: Open the File named Dummy_DB.db with any sqlite studio and fill some dummy database.**
 
 **Note:- This is a basic Project so I have not think about the further User content(Just 1 Page).**
 
